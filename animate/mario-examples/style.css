@@ -46,6 +46,9 @@ html, body{
   left: 0;
   animation-name: drive;
   animation-duration: 5s;
+  animation-delay: 2s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
 }
 
 
@@ -53,11 +56,11 @@ html, body{
 /*// KEYFRAMES //*/
 @keyframes drive{
   from{
-    transform: translateX(0)
+    transform: translateX(-200)
   }
 
   to{
-    transform: translateX(500px)
+    transform: translateX(1000px)
   }
 
 
