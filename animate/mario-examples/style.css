@@ -44,8 +44,8 @@ html, body{
   position: absolute;
   top: -40px;
   left: 0;
-  animation-name: drive;
-  animation-duration: 5s;
+  animation-name: drive, jump 0.3s 1.2s ease;
+  animation-duration: 7s;
   animation-delay: 2s;
   animation-fill-mode: both;
   animation-iteration-count: infinite;
@@ -57,14 +57,31 @@ html, body{
   top: 100px;
   left: 0;
   animation-name: drive;
-  animation-duration: 9s;
+  animation-duration: 6s;
   animation-delay: 0;
   animation-fill-mode: both;
   animation-iteration-count: infinite;
-  animation-direction: alternate-reverse;
+  animation-direction: normal;
   animation-timing-function: cubic-bezier(.1, .67, 1, .28);
 }
 
+.cloud{
+  position: absolute;
+}
+
+.cloud:nth-child(1){
+  width: 200px;
+  top:120px;
+  opacity: .5;
+  animation: wind 80s linear infinite reverse;
+}
+
+.cloud:nth-child(2){
+  width: 400px;
+  top:0px;
+  opacity: .5;
+  animation: wind 50s linear infinite reverse;
+}
 
 
 
@@ -78,6 +95,21 @@ html, body{
     transform: translateX(1000px)
   }
 
+@keyframes wind{
+  from{
+    left: -300px
+  }
+
+  to{
+    left: 100%;
+  }
+}
+
+@keyframes jump{
+ 0% {top: -40px}
+ 50% {top: -100px}
+ 100% {top: -40px}
+}
 
 }
 
